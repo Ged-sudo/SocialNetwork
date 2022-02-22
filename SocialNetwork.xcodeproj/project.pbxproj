@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		99B7A47A27C5490A0030B522 /* EditInfoUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B7A47927C5490A0030B522 /* EditInfoUserController.swift */; };
+		99B7A47C27C54C080030B522 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B7A47B27C54C080030B522 /* UserSettings.swift */; };
 		99DD798827C3F38800178783 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DD798727C3F38800178783 /* AppDelegate.swift */; };
 		99DD798A27C3F38800178783 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DD798927C3F38800178783 /* SceneDelegate.swift */; };
 		99DD798C27C3F38800178783 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DD798B27C3F38800178783 /* ViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		99B7A47927C5490A0030B522 /* EditInfoUserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditInfoUserController.swift; sourceTree = "<group>"; };
+		99B7A47B27C54C080030B522 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		99DD798427C3F38800178783 /* SocialNetwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialNetwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99DD798727C3F38800178783 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99DD798927C3F38800178783 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +70,8 @@
 				99DD799227C3F38C00178783 /* LaunchScreen.storyboard */,
 				99DD799527C3F38C00178783 /* Info.plist */,
 				99DD799B27C4190600178783 /* PostCell.swift */,
+				99B7A47927C5490A0030B522 /* EditInfoUserController.swift */,
+				99B7A47B27C54C080030B522 /* UserSettings.swift */,
 			);
 			path = SocialNetwork;
 			sourceTree = "<group>";
@@ -142,7 +148,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				99DD798C27C3F38800178783 /* ViewController.swift in Sources */,
+				99B7A47C27C54C080030B522 /* UserSettings.swift in Sources */,
 				99DD798827C3F38800178783 /* AppDelegate.swift in Sources */,
+				99B7A47A27C5490A0030B522 /* EditInfoUserController.swift in Sources */,
 				99DD798A27C3F38800178783 /* SceneDelegate.swift in Sources */,
 				99DD799C27C4190600178783 /* PostCell.swift in Sources */,
 			);
