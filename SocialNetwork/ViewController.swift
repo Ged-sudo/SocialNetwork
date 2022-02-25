@@ -6,24 +6,21 @@
 //
 
 import UIKit
+import RealmSwift
+
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var array: Array<String> = ["First post in table", "Second post in table", "Therd post in table", "Forth post in table"]
     
     @IBOutlet weak var userName: UILabel!
-    var newNameUser: String = ""
+    
 
     @IBOutlet weak var postTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let userData = UserSettings()
-        
         postTableView.delegate = self
         postTableView.dataSource = self
-        
-        userName.text = userData.name
     }
 
     

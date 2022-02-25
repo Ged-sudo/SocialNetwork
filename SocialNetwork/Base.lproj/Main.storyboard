@@ -368,6 +368,9 @@
                                 <variation key="widthClass=compact">
                                     <nil key="tintColor"/>
                                 </variation>
+                                <connections>
+                                    <action selector="maleUser:" destination="N0i-vp-ht0" eventType="valueChanged" id="4B1-BM-IqE"/>
+                                </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ваш пол - " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rUI-hz-QWI">
                                 <rect key="frame" x="25" y="401" width="95.5" height="24"/>

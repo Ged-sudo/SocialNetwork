@@ -6,36 +6,65 @@
 //
 
 import UIKit
+import RealmSwift
 
 class EditInfoUserController: UIViewController {
+    var userMaleSt: String = ""
+    let realm = try! Realm()
 
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var newUserName: UITextField!
-    @IBOutlet weak var userMale: UISegmentedControl!
+   // @IBOutlet weak var userMaleInp: UISegmentedControl!
     override func viewDidLoad() {
-        let userSett = UserSettings()
+        
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        userNameLabel.text = userSett.name
+        
     }
+    @IBAction func maleUser(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex{
+        case 0:
+            userMaleSt = "Mane"
+        case 1:
+            userMaleSt = "Wooman"
+        default:
+            break
+        }
+    }
+    
     
     @IBAction func saveButoon(_ sender: Any) {
+        let userName = newUserName.text
+        let userMale = userMaleSt
+        let imageNameUser = "1.jpg"
         
-        let userSett = UserSettings()
-        userSett.name = String(newUserName.text!)
         
-        userNameLabel.text = userSett.name
-        //userNameLabel.text = newUserName.text
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard segue.identifier == "settings" else {return}
-        guard let destination = segue.destination as? ViewController else { return }
-        
-        //destination.newNameUser = String(newUserName.text ?? "BadName")
-        
-    }
+        if (realm.isEmpty){
+                let User = UserData(value: [
+                    "id":1,
+                    "nameUser":userName,
+                    "maleUser":userMale,
+                    "imageNameUser":imageNameUser]
+                )
+                try! realm.write{
+                    realm.add(User, update: .all)
+                }
+                
+            }
+        if (!realm.isEmpty){
+            let User = UserData(value: [
+                "id":1,
+                "nameUser":userName,
+                "maleUser":userMale,
+                "imageNameUser":imageNameUser]
+            )
+            try! realm.write{
+                //realm.add(User, update: true)
+                
+            }
+        }
+        }
 
+    
+  
 }
